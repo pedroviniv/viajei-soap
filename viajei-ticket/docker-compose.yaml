@@ -1,0 +1,29 @@
+version: "2"
+services:
+  db:
+    container_name: viajei-ticket-db
+    image: viajei-ticket-postgres
+    build: ./database
+    ports: 
+      - "5434:5432"
+    expose:
+      - 5434
+    volumes:
+      - viajei-ticket-postgres:/var/lib/postgresql/data
+  web:
+    container_name: viajei-ticket-web
+    build: .
+    image: viajei-ticket-payara
+    ports:
+      - "8083:8080"
+    links: 
+      - "db:viajei-ticket-db"
+    expose:
+      - 8083
+networks:
+  default:
+    external:
+      name: viajei
+volumes:
+  viajei-ticket-postgres:
+    driver: local 
