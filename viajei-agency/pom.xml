@@ -16,6 +16,11 @@
     
     <dependencies>
         <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>9.4.1212.jre7</version>
+        </dependency>
+        <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
             <version>7.0</version>
@@ -86,8 +91,9 @@
                             <id>viajei-client-clients</id>
                             <packageName>br.edu.ifpb.pos.soap.viajei.client.clients</packageName>
                             <wsdlUrls>
-                                <wsdlLocation>http://kieckegard-pc:8085/viajei-client/ClientServiceService?wsdl</wsdlLocation>
+                                <wsdlUrl>http://kieckegard-pc:8085/viajei-client/ClientServiceService?wsdl</wsdlUrl>
                             </wsdlUrls> 
+                            <wsdlLocation>http://clients-web:8080/viajei-client/ClientServiceService?wsdl</wsdlLocation>
                             <verbose>true</verbose>
                             <sourceDestDir>${basedir}/src/main/java</sourceDestDir>
                             <target>2.1</target>
@@ -109,8 +115,9 @@
                             <id>viajei-hotel-rooms</id>
                             <packageName>br.edu.ifpb.pos.soap.viajei.client.hotel.room</packageName>
                             <wsdlUrls>
-                                <wsdlLocation>http://localhost:8084/viajei-hotel/RoomsService?wsdl</wsdlLocation>
+                                <wsdlUrl>http://localhost:8084/viajei-hotel/RoomsService?wsdl</wsdlUrl>
                             </wsdlUrls> 
+                            <wsdlLocation>http://hotels-web:8080/viajei-hotel/RoomsService?wsdl</wsdlLocation>
                             <verbose>true</verbose>
                             <sourceDestDir>${basedir}/src/main/java</sourceDestDir>
                             <target>2.1</target>
@@ -131,8 +138,9 @@
                         <configuration>
                             <packageName>br.edu.ifpb.pos.soap.viajei.client.hotel.hotel</packageName>
                             <wsdlUrls>
-                                <wsdlLocation>http://localhost:8084/viajei-hotel/HotelsService?wsdl</wsdlLocation>
+                                <wsdlUrl>http://localhost:8084/viajei-hotel/HotelsService?wsdl</wsdlUrl>
                             </wsdlUrls> 
+                            <wsdlLocation>http://hotels-web:8080/viajei-hotel/HotelsService?wsdl</wsdlLocation>
                             <verbose>true</verbose>
                             <sourceDestDir>${basedir}/src/main/java</sourceDestDir>
                             <target>2.1</target>
@@ -154,8 +162,9 @@
                             <id>viajei-hotel-booking</id>
                             <packageName>br.edu.ifpb.pos.soap.viajei.client.hotel.bookings</packageName>
                             <wsdlUrls>
-                                <wsdlLocation>http://localhost:8084/viajei-hotel/BookingsService?wsdl</wsdlLocation>
+                                <wsdlUrl>http://localhost:8084/viajei-hotel/BookingsService?wsdl</wsdlUrl>
                             </wsdlUrls> 
+                            <wsdlLocation>http://hotels-web:8080/viajei-hotel/BookingsService?wsdl</wsdlLocation>
                             <verbose>true</verbose>
                             <sourceDestDir>${basedir}/src/main/java</sourceDestDir>
                             <target>2.1</target>
@@ -176,8 +185,9 @@
                         <configuration>
                             <packageName>br.edu.ifpb.pos.soap.viajei.client.transports</packageName>
                             <wsdlUrls>
-                                <wsdlLocation>http://localhost:8082/viajei-transport/TransportsService?wsdl</wsdlLocation>
+                                <wsdlUrl>http://localhost:8082/viajei-transport/TransportsService?wsdl</wsdlUrl>
                             </wsdlUrls> 
+                            <wsdlLocation>http://transports-web:8080/viajei-transport/TransportsService?wsdl</wsdlLocation>
                             <verbose>true</verbose>
                             <sourceDestDir>${basedir}/src/main/java</sourceDestDir>
                             <target>2.1</target>
@@ -198,8 +208,9 @@
                         <configuration>
                             <packageName>br.edu.ifpb.pos.soap.viajei.client.transports.routes</packageName>
                             <wsdlUrls>
-                                <wsdlLocation>http://localhost:8082/viajei-transport/RoutesService?wsdl</wsdlLocation>
+                                <wsdlUrl>http://localhost:8082/viajei-transport/RoutesService?wsdl</wsdlUrl>
                             </wsdlUrls> 
+                            <wsdlLocation>http://transports-web:8080/viajei-transport/RoutesService?wsdl</wsdlLocation>
                             <verbose>true</verbose>
                             <sourceDestDir>${basedir}/src/main/java</sourceDestDir>
                             <target>2.1</target>
@@ -220,8 +231,9 @@
                         <configuration>
                             <packageName>br.edu.ifpb.pos.soap.viajei.client.ticket.tickets</packageName>
                             <wsdlUrls>
-                                <wsdlLocation>http://localhost:8083/viajei-ticket/TicketsService?wsdl</wsdlLocation>
+                                <wsdlUrl>http://localhost:8083/viajei-ticket/TicketsService?wsdl</wsdlUrl>
                             </wsdlUrls> 
+                            <wsdlLocation>http://tickets-web:8080/viajei-ticket/TicketsService?wsdl</wsdlLocation>
                             <verbose>true</verbose>
                             <sourceDestDir>${basedir}/src/main/java</sourceDestDir>
                             <target>2.1</target>

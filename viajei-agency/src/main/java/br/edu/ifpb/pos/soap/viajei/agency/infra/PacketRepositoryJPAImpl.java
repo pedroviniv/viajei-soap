@@ -46,7 +46,7 @@ public class PacketRepositoryJPAImpl implements PacketRepository {
         Optional<Packet> searchResult = Optional
                 .ofNullable(this.manager.find(Packet.class, packageId));
         if(!searchResult.isPresent())
-            throw new EntityNotFoundException("There's no package"
+            throw new EntityNotFoundException("There's no packet"
                     + " with the id " + packageId);
         
         return searchResult.get();
@@ -55,7 +55,7 @@ public class PacketRepositoryJPAImpl implements PacketRepository {
     @Override
     public List<Packet> listAll() {
         return this.manager
-                .createQuery("FROM Package p", Packet.class)
+                .createQuery("FROM Packet p", Packet.class)
                 .getResultList();
     }
     

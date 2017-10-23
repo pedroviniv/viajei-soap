@@ -5,7 +5,7 @@
  */
 package br.edu.ifpb.pos.soap.viajei.agency.ws;
 
-import br.edu.ifpb.pos.soap.viajei.agency.adapters.RouteAdapter;
+import br.edu.ifpb.pos.soap.viajei.agency.adapters.RouteConverter;
 import br.edu.ifpb.pos.soap.viajei.agency.domain.Client;
 import br.edu.ifpb.pos.soap.viajei.agency.domain.HotelBooking;
 import br.edu.ifpb.pos.soap.viajei.agency.domain.Packet;
@@ -41,6 +41,8 @@ public class PacketOrders {
     @Inject private Routes routes;
     @Inject private Rooms rooms;
     
+    @Inject private RouteConverter routeConverter;
+    
     public void removePacketOrder(@WebParam(name = "packetOrderId") Long packetOrderId) {
         
         PacketOrder packetOrderFound = this.packetOrderRepository
@@ -71,9 +73,8 @@ public class PacketOrders {
         
         Route route = routes.findRouteById(packet.getRoute().getId());
         
-        RouteAdapter routeAdapter = new RouteAdapter(route);
+        ticket.setRoute(routeConverter.convert(route));
         
-        ticket.setRoute(routeAdapter);
         ticket.setSeatNumber(packetOrderReq.getSeatNumber());
         
         //ticket client obj

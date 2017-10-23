@@ -16,6 +16,7 @@ import java.time.LocalDateTime;
 import javax.inject.Inject;
 import javax.jws.WebParam;
 import javax.jws.WebService;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  *
@@ -45,7 +46,9 @@ public class Bookings {
             @WebParam(name = "hotelId") Long hotelId, 
             @WebParam(name = "roomId") Long roomId, 
             @WebParam(name = "client") Client client,
-            @WebParam(name = "startDate") LocalDateTime startDate,
+            @WebParam(name = "startDate") 
+                @XmlJavaTypeAdapter(LocalDateTimeAdapter.class) 
+                    LocalDateTime startDate,
             @WebParam(name = "daysQty") Integer daysQty) {
         
         Hotel foundHotel = this.hotelRepository.findById(hotelId);

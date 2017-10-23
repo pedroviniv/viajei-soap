@@ -6,6 +6,8 @@
 package br.edu.ifpb.pos.soap.viajei.agency.domain;
 
 import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -14,12 +16,18 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 
 @XmlRootElement
+@Embeddable
 public class Transport implements Serializable {
     
+    @Column(name = "transport_id")
     private Long id;
 
     public Transport(Long id) {
         this.id = id;
+    }
+    
+    public Transport() {
+        
     }
 
     public Long getId() {

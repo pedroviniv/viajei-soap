@@ -26,6 +26,20 @@ public interface Transports {
 
     /**
      * 
+     * @param route
+     * @param transportId
+     */
+    @WebMethod
+    @RequestWrapper(localName = "addRoute", targetNamespace = "http://ws.transport.viajei.soap.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.viajei.client.transports.AddRoute")
+    @ResponseWrapper(localName = "addRouteResponse", targetNamespace = "http://ws.transport.viajei.soap.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.viajei.client.transports.AddRouteResponse")
+    public void addRoute(
+        @WebParam(name = "transportId", targetNamespace = "")
+        Long transportId,
+        @WebParam(name = "route", targetNamespace = "")
+        Route route);
+
+    /**
+     * 
      * @param transport
      */
     @WebMethod
@@ -76,19 +90,5 @@ public interface Transports {
     public Transport findTransportById(
         @WebParam(name = "transportId", targetNamespace = "")
         Long transportId);
-
-    /**
-     * 
-     * @param route
-     * @param transportId
-     */
-    @WebMethod
-    @RequestWrapper(localName = "addRoute", targetNamespace = "http://ws.transport.viajei.soap.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.viajei.client.transports.AddRoute")
-    @ResponseWrapper(localName = "addRouteResponse", targetNamespace = "http://ws.transport.viajei.soap.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.viajei.client.transports.AddRouteResponse")
-    public void addRoute(
-        @WebParam(name = "transportId", targetNamespace = "")
-        Long transportId,
-        @WebParam(name = "route", targetNamespace = "")
-        Route route);
 
 }

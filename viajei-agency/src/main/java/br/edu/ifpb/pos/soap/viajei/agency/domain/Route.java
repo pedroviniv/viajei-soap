@@ -6,6 +6,8 @@
 package br.edu.ifpb.pos.soap.viajei.agency.domain;
 
 import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -14,8 +16,10 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 
 @XmlRootElement
+@Embeddable
 public class Route implements Serializable {
     
+    @Column(name = "route_id")
     private Long id;
 
     public Route(Long id) {

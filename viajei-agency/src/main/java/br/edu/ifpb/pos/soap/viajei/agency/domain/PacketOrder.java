@@ -14,6 +14,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 /**
  *
@@ -21,13 +22,14 @@ import javax.persistence.ManyToOne;
  */
 
 @Entity
+@Table(name = "packet_order")
 public class PacketOrder implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "package_id")
+    @JoinColumn(name = "packet_id")
     private Packet packet;
     @Embedded
     private HotelBooking hotelBooking;

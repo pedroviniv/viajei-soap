@@ -26,6 +26,17 @@ public interface Rooms {
 
     /**
      * 
+     * @param updatedRoom
+     */
+    @WebMethod
+    @RequestWrapper(localName = "updateRoom", targetNamespace = "http://ws.hotel.viajei.soap.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.soap.viajei.client.hotel.room.UpdateRoom")
+    @ResponseWrapper(localName = "updateRoomResponse", targetNamespace = "http://ws.hotel.viajei.soap.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.soap.viajei.client.hotel.room.UpdateRoomResponse")
+    public void updateRoom(
+        @WebParam(name = "updatedRoom", targetNamespace = "")
+        Room updatedRoom);
+
+    /**
+     * 
      * @param roomId
      * @return
      *     returns br.edu.ifpb.pos.soap.viajei.client.hotel.room.Room
@@ -59,17 +70,6 @@ public interface Rooms {
     public void addRoom(
         @WebParam(name = "newRoom", targetNamespace = "")
         Room newRoom);
-
-    /**
-     * 
-     * @param updatedRoom
-     */
-    @WebMethod
-    @RequestWrapper(localName = "updateRoom", targetNamespace = "http://ws.hotel.viajei.soap.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.soap.viajei.client.hotel.room.UpdateRoom")
-    @ResponseWrapper(localName = "updateRoomResponse", targetNamespace = "http://ws.hotel.viajei.soap.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.soap.viajei.client.hotel.room.UpdateRoomResponse")
-    public void updateRoom(
-        @WebParam(name = "updatedRoom", targetNamespace = "")
-        Room updatedRoom);
 
     /**
      * 

@@ -25,6 +25,9 @@ CREATE TABLE booking (
 	client_cpf TEXT,
 	hotel_id BIGINT,
 	room_id BIGINT,
+	start_at TIMESTAMP,
+	finish_at TIMESTAMP,
+	days INTEGER,
 	FOREIGN KEY(hotel_id) REFERENCES hotel(id),
 	FOREIGN KEY(room_id) REFERENCES room(id),
 	PRIMARY KEY(id)

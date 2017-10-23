@@ -12,8 +12,8 @@
     <modules>
         <module>viajei-client</module>
         <module>viajei-hotel</module>
+        <module>viajei-transport</module>
         <module>viajei-ticket</module>
         <module>viajei-agency</module>
-    <module>viajei-transport</module>
-  </modules>
+    </modules>
 </project>

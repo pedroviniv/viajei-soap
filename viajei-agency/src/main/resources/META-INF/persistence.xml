@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-  <persistence-unit name="viajei-hotel-pu" transaction-type="JTA">
-    <jta-data-source>java:app/jdbc/viajei-hotel-ds</jta-data-source>
-    <class>br.edu.ifpb.pos.soap.viajei.hotel.domain.Booking</class>
-    <class>br.edu.ifpb.pos.soap.viajei.hotel.domain.Hotel</class>
-    <class>br.edu.ifpb.pos.soap.viajei.hotel.domain.Room</class>
-    <class>br.edu.ifpb.pos.soap.viajei.hotel.infra.LocalDateTimeConverter</class>
+  <persistence-unit name="viajei-agency-pu" transaction-type="JTA">
+    <jta-data-source>java:app/jdbc/viajei-agency-ds</jta-data-source>
+    <class>br.edu.ifpb.pos.soap.viajei.agency.domain.Packet</class>
+    <class>br.edu.ifpb.pos.soap.viajei.agency.domain.PacketOrder</class>
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.schema-generation.database.action" value="create"/>

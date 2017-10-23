@@ -13,6 +13,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  *
@@ -20,6 +21,7 @@ import javax.persistence.Id;
  */
 
 @Entity
+@Table(name = "packet")
 public class Packet implements Serializable {
     
     @Id
@@ -44,6 +46,10 @@ public class Packet implements Serializable {
         this.transport = transport;
         this.route = route;
         this.cost = cost;
+    }
+    
+    public Packet() {
+        
     }
 
     public Long getId() {

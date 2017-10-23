@@ -26,6 +26,32 @@ public interface Bookings {
 
     /**
      * 
+     * @param client
+     * @param hotelId
+     * @param daysQty
+     * @param roomId
+     * @param startDate
+     * @return
+     *     returns java.lang.Long
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "book", targetNamespace = "http://ws.hotel.viajei.soap.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.soap.viajei.client.hotel.bookings.Book")
+    @ResponseWrapper(localName = "bookResponse", targetNamespace = "http://ws.hotel.viajei.soap.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.soap.viajei.client.hotel.bookings.BookResponse")
+    public Long book(
+        @WebParam(name = "hotelId", targetNamespace = "")
+        Long hotelId,
+        @WebParam(name = "roomId", targetNamespace = "")
+        Long roomId,
+        @WebParam(name = "client", targetNamespace = "")
+        Client client,
+        @WebParam(name = "startDate", targetNamespace = "")
+        String startDate,
+        @WebParam(name = "daysQty", targetNamespace = "")
+        Integer daysQty);
+
+    /**
+     * 
      * @param bookingId
      */
     @WebMethod
@@ -59,31 +85,5 @@ public interface Bookings {
     @RequestWrapper(localName = "listAllBookings", targetNamespace = "http://ws.hotel.viajei.soap.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.soap.viajei.client.hotel.bookings.ListAllBookings")
     @ResponseWrapper(localName = "listAllBookingsResponse", targetNamespace = "http://ws.hotel.viajei.soap.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.soap.viajei.client.hotel.bookings.ListAllBookingsResponse")
     public List<Booking> listAllBookings();
-
-    /**
-     * 
-     * @param client
-     * @param hotelId
-     * @param daysQty
-     * @param roomId
-     * @param startDate
-     * @return
-     *     returns java.lang.Long
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "book", targetNamespace = "http://ws.hotel.viajei.soap.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.soap.viajei.client.hotel.bookings.Book")
-    @ResponseWrapper(localName = "bookResponse", targetNamespace = "http://ws.hotel.viajei.soap.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.soap.viajei.client.hotel.bookings.BookResponse")
-    public Long book(
-        @WebParam(name = "hotelId", targetNamespace = "")
-        Long hotelId,
-        @WebParam(name = "roomId", targetNamespace = "")
-        Long roomId,
-        @WebParam(name = "client", targetNamespace = "")
-        Client client,
-        @WebParam(name = "startDate", targetNamespace = "")
-        LocalDateTime startDate,
-        @WebParam(name = "daysQty", targetNamespace = "")
-        Integer daysQty);
 
 }

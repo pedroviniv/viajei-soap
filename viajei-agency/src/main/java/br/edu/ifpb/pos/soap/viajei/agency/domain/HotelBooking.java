@@ -8,12 +8,15 @@ package br.edu.ifpb.pos.soap.viajei.agency.domain;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author kieckegard
  */
 
+
+@XmlRootElement
 @Embeddable
 public class HotelBooking implements Serializable {
     

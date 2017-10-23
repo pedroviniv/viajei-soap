@@ -26,20 +26,6 @@ public interface ClientService {
 
     /**
      * 
-     * @param clientId
-     * @return
-     *     returns br.edu.ifpb.pos.soap.viajei.client.clients.Client
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "findById", targetNamespace = "http://ws.client.viajei.soap.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.soap.viajei.client.clients.FindById")
-    @ResponseWrapper(localName = "findByIdResponse", targetNamespace = "http://ws.client.viajei.soap.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.soap.viajei.client.clients.FindByIdResponse")
-    public Client findById(
-        @WebParam(name = "clientId", targetNamespace = "")
-        Long clientId);
-
-    /**
-     * 
      * @param clientCpf
      * @return
      *     returns br.edu.ifpb.pos.soap.viajei.client.clients.Client
@@ -62,6 +48,20 @@ public interface ClientService {
     @RequestWrapper(localName = "listAll", targetNamespace = "http://ws.client.viajei.soap.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.soap.viajei.client.clients.ListAll")
     @ResponseWrapper(localName = "listAllResponse", targetNamespace = "http://ws.client.viajei.soap.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.soap.viajei.client.clients.ListAllResponse")
     public List<Client> listAll();
+
+    /**
+     * 
+     * @param clientId
+     * @return
+     *     returns br.edu.ifpb.pos.soap.viajei.client.clients.Client
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findById", targetNamespace = "http://ws.client.viajei.soap.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.soap.viajei.client.clients.FindById")
+    @ResponseWrapper(localName = "findByIdResponse", targetNamespace = "http://ws.client.viajei.soap.pos.ifpb.edu.br/", className = "br.edu.ifpb.pos.soap.viajei.client.clients.FindByIdResponse")
+    public Client findById(
+        @WebParam(name = "clientId", targetNamespace = "")
+        Long clientId);
 
     /**
      * 

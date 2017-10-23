@@ -1,0 +1,128 @@
+version: "2"
+services:
+  clients-db:
+    container_name: viajei-client-db
+    image: viajei-client-postgres
+    build: ./viajei-client/database
+    ports: 
+      - "5436:5432"
+    expose:
+      - 5436
+    volumes:
+      - viajei-client-postgres:/var/lib/postgresql/data
+  clients-web:
+    container_name: viajei-client-web
+    build: ./viajei-client
+    image: viajei-client-payara
+    ports:
+      - "8085:8080"
+    links: 
+      - "clients-db:viajei-client-db"
+    expose:
+      - 8085
+
+  hotels-db:
+    container_name: viajei-hotel-db
+    image: viajei-hotel-postgres
+    build: ./viajei-hotel/database
+    ports: 
+      - "5435:5432"
+    expose:
+      - 5435
+    volumes:
+      - viajei-hotel-postgres:/var/lib/postgresql/data
+  hotels-web:
+    container_name: viajei-hotel-web
+    build: ./viajei-hotel
+    image: viajei-hotel-payara
+    ports:
+      - "8084:8080"
+    links: 
+      - "hotels-db:viajei-hotel-db"
+    expose:
+      - 8084
+
+  transports-db:
+    container_name: viajei-transport-db
+    image: viajei-transport-postgres
+    build: ./viajei-transport/database
+    ports: 
+      - "5433:5432"
+    expose:
+      - 5433
+    volumes:
+      - viajei-transport-postgres:/var/lib/postgresql/data
+  transports-web:
+    container_name: viajei-transport-web
+    build: ./viajei-transport
+    image: viajei-transport-payara
+    ports:
+      - "8082:8080"
+    links: 
+      - "transports-db:viajei-transport-db"
+    expose:
+      - 8082
+
+  tickets-db:
+    container_name: viajei-ticket-db
+    image: viajei-ticket-postgres
+    build: ./viajei-ticket/database
+    ports: 
+      - "5434:5432"
+    expose:
+      - 5434
+    volumes:
+      - viajei-ticket-postgres:/var/lib/postgresql/data
+  tickets-web:
+    container_name: viajei-ticket-web
+    build: ./viajei-ticket
+    image: viajei-ticket-payara
+    ports:
+      - "8083:8080"
+    links: 
+      - "tickets-db:viajei-ticket-db"
+    expose:
+      - 8083
+
+  agency-db:
+    container_name: viajei-agency-db
+    image: viajei-agency-postgres
+    build: ./viajei-agency/database
+    ports: 
+      - "5437:5432"
+    expose:
+      - 5437
+    volumes:
+      - viajei-agency-postgres:/var/lib/postgresql/data
+  agency-web:
+    container_name: viajei-agency-web
+    build: ./viajei-agency
+    image: viajei-agency-payara
+    ports:
+      - "8086:8080"
+    links: 
+      - agency-db:viajei-agency-db
+      - clients-web:clients-web
+      - hotels-web:hotels-web
+      - transports-web:transports-web
+      - tickets-web:tickets-web
+
+    expose:
+      - 8086
+
+networks:
+  default:
+    external:
+      name: viajei
+
+volumes:
+  viajei-client-postgres:
+    driver: local 
+  viajei-hotel-postgres:
+    driver: local
+  viajei-transport-postgres:
+    driver: local
+  viajei-ticket-postgres:
+    driver: local
+  viajei-agency-postgres:
+    driver: local

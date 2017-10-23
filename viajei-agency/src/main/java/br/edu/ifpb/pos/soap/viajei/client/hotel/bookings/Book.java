@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="hotelId" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *         &lt;element name="roomId" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *         &lt;element name="client" type="{http://ws.hotel.viajei.soap.pos.ifpb.edu.br/}client" minOccurs="0"/>
- *         &lt;element name="startDate" type="{http://ws.hotel.viajei.soap.pos.ifpb.edu.br/}localDateTime" minOccurs="0"/>
+ *         &lt;element name="startDate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="daysQty" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -42,7 +42,7 @@ public class Book {
     protected Long hotelId;
     protected Long roomId;
     protected Client client;
-    protected LocalDateTime startDate;
+    protected String startDate;
     protected Integer daysQty;
 
     /**
@@ -122,10 +122,10 @@ public class Book {
      * 
      * @return
      *     possible object is
-     *     {@link LocalDateTime }
+     *     {@link String }
      *     
      */
-    public LocalDateTime getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
@@ -134,10 +134,10 @@ public class Book {
      * 
      * @param value
      *     allowed object is
-     *     {@link LocalDateTime }
+     *     {@link String }
      *     
      */
-    public void setStartDate(LocalDateTime value) {
+    public void setStartDate(String value) {
         this.startDate = value;
     }
 
