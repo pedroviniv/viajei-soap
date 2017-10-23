@@ -6,14 +6,14 @@
 package br.edu.ifpb.pos.soap.viajei.agency.validator;
 
 import br.edu.ifpb.pos.soap.viajei.agency.domain.Packet;
-import br.edu.ifpb.pos.viajei.client.hotel.hotel.Hotel;
-import br.edu.ifpb.pos.viajei.client.hotel.hotel.Hotels;
-import br.edu.ifpb.pos.viajei.client.hotel.room.Room;
-import br.edu.ifpb.pos.viajei.client.hotel.room.Rooms;
-import br.edu.ifpb.pos.viajei.client.transports.Transport;
-import br.edu.ifpb.pos.viajei.client.transports.Transports;
-import br.edu.ifpb.pos.viajei.client.transports.routes.Route;
-import br.edu.ifpb.pos.viajei.client.transports.routes.Routes;
+import br.edu.ifpb.pos.soap.viajei.client.hotel.hotel.Hotel;
+import br.edu.ifpb.pos.soap.viajei.client.hotel.hotel.Hotels;
+import br.edu.ifpb.pos.soap.viajei.client.hotel.room.Room;
+import br.edu.ifpb.pos.soap.viajei.client.hotel.room.Rooms;
+import br.edu.ifpb.pos.soap.viajei.client.transports.Transport;
+import br.edu.ifpb.pos.soap.viajei.client.transports.Transports;
+import br.edu.ifpb.pos.soap.viajei.client.transports.routes.Route;
+import br.edu.ifpb.pos.soap.viajei.client.transports.routes.Routes;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 

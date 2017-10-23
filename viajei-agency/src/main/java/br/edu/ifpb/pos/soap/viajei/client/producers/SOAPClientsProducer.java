@@ -5,20 +5,20 @@
  */
 package br.edu.ifpb.pos.soap.viajei.client.producers;
 
-import br.edu.ifpb.pos.viajei.client.clients.ClientService;
-import br.edu.ifpb.pos.viajei.client.clients.ClientServiceService;
-import br.edu.ifpb.pos.viajei.client.hotel.bookings.Bookings;
-import br.edu.ifpb.pos.viajei.client.hotel.bookings.BookingsService;
-import br.edu.ifpb.pos.viajei.client.hotel.hotel.Hotels;
-import br.edu.ifpb.pos.viajei.client.hotel.hotel.HotelsService;
-import br.edu.ifpb.pos.viajei.client.hotel.room.Rooms;
-import br.edu.ifpb.pos.viajei.client.hotel.room.RoomsService;
-import br.edu.ifpb.pos.viajei.client.ticket.tickets.Tickets;
-import br.edu.ifpb.pos.viajei.client.ticket.tickets.TicketsService;
-import br.edu.ifpb.pos.viajei.client.transports.Transports;
-import br.edu.ifpb.pos.viajei.client.transports.TransportsService;
-import br.edu.ifpb.pos.viajei.client.transports.routes.Routes;
-import br.edu.ifpb.pos.viajei.client.transports.routes.RoutesService;
+import br.edu.ifpb.pos.soap.viajei.client.clients.ClientService;
+import br.edu.ifpb.pos.soap.viajei.client.clients.ClientServiceService;
+import br.edu.ifpb.pos.soap.viajei.client.hotel.bookings.Bookings;
+import br.edu.ifpb.pos.soap.viajei.client.hotel.bookings.BookingsService;
+import br.edu.ifpb.pos.soap.viajei.client.hotel.hotel.Hotels;
+import br.edu.ifpb.pos.soap.viajei.client.hotel.hotel.HotelsService;
+import br.edu.ifpb.pos.soap.viajei.client.hotel.room.Rooms;
+import br.edu.ifpb.pos.soap.viajei.client.hotel.room.RoomsService;
+import br.edu.ifpb.pos.soap.viajei.client.ticket.tickets.Tickets;
+import br.edu.ifpb.pos.soap.viajei.client.ticket.tickets.TicketsService;
+import br.edu.ifpb.pos.soap.viajei.client.transports.Transports;
+import br.edu.ifpb.pos.soap.viajei.client.transports.TransportsService;
+import br.edu.ifpb.pos.soap.viajei.client.transports.routes.Routes;
+import br.edu.ifpb.pos.soap.viajei.client.transports.routes.RoutesService;
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.inject.Default;

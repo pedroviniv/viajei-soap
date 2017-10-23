@@ -5,8 +5,9 @@
  */
 package br.edu.ifpb.pos.soap.viajei.agency.adapters;
 
-import br.edu.ifpb.pos.viajei.client.ticket.tickets.Route;
-import br.edu.ifpb.pos.viajei.client.transports.routes.Address;
+import br.edu.ifpb.pos.soap.viajei.client.ticket.tickets.Route;
+import br.edu.ifpb.pos.soap.viajei.client.transports.routes.Address;
+
 
 /**
  *
@@ -14,11 +15,11 @@ import br.edu.ifpb.pos.viajei.client.transports.routes.Address;
  */
 public class RouteAdapter extends Route {
     
-    private br.edu.ifpb.pos.viajei.client.transports.routes.Route route;
+    private br.edu.ifpb.pos.soap.viajei.client.transports.routes.Route route;
     private String fromAddress;
     private String toAddress;
     
-    public RouteAdapter(br.edu.ifpb.pos.viajei.client.transports.routes.Route route) {
+    public RouteAdapter(br.edu.ifpb.pos.soap.viajei.client.transports.routes.Route route) {
         this.route = route;
         this.toAddress = addressToString(route.getDestiny());
         this.fromAddress = addressToString(route.getOrigin());

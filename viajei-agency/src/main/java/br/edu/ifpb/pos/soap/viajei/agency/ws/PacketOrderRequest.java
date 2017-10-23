@@ -6,7 +6,7 @@
 package br.edu.ifpb.pos.soap.viajei.agency.ws;
 
 import br.edu.ifpb.pos.soap.viajei.agency.adapters.LocalDateTimeAdapter;
-import br.edu.ifpb.pos.viajei.client.hotel.bookings.LocalDateTime;
+import br.edu.ifpb.pos.soap.viajei.client.hotel.bookings.LocalDateTime;
 import java.io.Serializable;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

@@ -5,17 +5,17 @@
  */
 package br.edu.ifpb.pos.soap.viajei.agency;
 
-import br.edu.ifpb.pos.viajei.client.ticket.tickets.Client;
-import br.edu.ifpb.pos.viajei.client.ticket.tickets.Route;
-import br.edu.ifpb.pos.viajei.client.ticket.tickets.Ticket;
-import br.edu.ifpb.pos.viajei.client.ticket.tickets.Tickets;
-import br.edu.ifpb.pos.viajei.client.ticket.tickets.TicketsService;
-import br.edu.ifpb.pos.viajei.client.ticket.tickets.Transport;
-import br.edu.ifpb.pos.viajei.client.transports.Address;
-import br.edu.ifpb.pos.viajei.client.transports.Horary;
-import br.edu.ifpb.pos.viajei.client.transports.RouteType;
-import br.edu.ifpb.pos.viajei.client.transports.Transports;
-import br.edu.ifpb.pos.viajei.client.transports.TransportsService;
+import br.edu.ifpb.pos.soap.viajei.client.ticket.tickets.Client;
+import br.edu.ifpb.pos.soap.viajei.client.ticket.tickets.Route;
+import br.edu.ifpb.pos.soap.viajei.client.ticket.tickets.Ticket;
+import br.edu.ifpb.pos.soap.viajei.client.ticket.tickets.Tickets;
+import br.edu.ifpb.pos.soap.viajei.client.ticket.tickets.TicketsService;
+import br.edu.ifpb.pos.soap.viajei.client.ticket.tickets.Transport;
+import br.edu.ifpb.pos.soap.viajei.client.transports.Address;
+import br.edu.ifpb.pos.soap.viajei.client.transports.Horary;
+import br.edu.ifpb.pos.soap.viajei.client.transports.RouteType;
+import br.edu.ifpb.pos.soap.viajei.client.transports.Transports;
+import br.edu.ifpb.pos.soap.viajei.client.transports.TransportsService;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;

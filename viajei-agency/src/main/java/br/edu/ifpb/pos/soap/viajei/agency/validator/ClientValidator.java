@@ -6,7 +6,7 @@
 package br.edu.ifpb.pos.soap.viajei.agency.validator;
 
 import br.edu.ifpb.pos.soap.viajei.agency.domain.Client;
-import br.edu.ifpb.pos.viajei.client.clients.ClientService;
+import br.edu.ifpb.pos.soap.viajei.client.clients.ClientService;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 

@@ -84,7 +84,7 @@
                         </goals>
                         <configuration>
                             <id>viajei-client-clients</id>
-                            <packageName>br.edu.ifpb.pos.viajei.client.clients</packageName>
+                            <packageName>br.edu.ifpb.pos.soap.viajei.client.clients</packageName>
                             <wsdlUrls>
                                 <wsdlLocation>http://kieckegard-pc:8085/viajei-client/ClientServiceService?wsdl</wsdlLocation>
                             </wsdlUrls> 
@@ -107,7 +107,7 @@
                         </goals>
                         <configuration>
                             <id>viajei-hotel-rooms</id>
-                            <packageName>br.edu.ifpb.pos.viajei.client.hotel.room</packageName>
+                            <packageName>br.edu.ifpb.pos.soap.viajei.client.hotel.room</packageName>
                             <wsdlUrls>
                                 <wsdlLocation>http://localhost:8084/viajei-hotel/RoomsService?wsdl</wsdlLocation>
                             </wsdlUrls> 
@@ -129,7 +129,7 @@
                             <goal>wsimport</goal>
                         </goals>
                         <configuration>
-                            <packageName>br.edu.ifpb.pos.viajei.client.hotel.hotel</packageName>
+                            <packageName>br.edu.ifpb.pos.soap.viajei.client.hotel.hotel</packageName>
                             <wsdlUrls>
                                 <wsdlLocation>http://localhost:8084/viajei-hotel/HotelsService?wsdl</wsdlLocation>
                             </wsdlUrls> 
@@ -152,7 +152,7 @@
                         </goals>
                         <configuration>
                             <id>viajei-hotel-booking</id>
-                            <packageName>br.edu.ifpb.pos.viajei.client.hotel.bookings</packageName>
+                            <packageName>br.edu.ifpb.pos.soap.viajei.client.hotel.bookings</packageName>
                             <wsdlUrls>
                                 <wsdlLocation>http://localhost:8084/viajei-hotel/BookingsService?wsdl</wsdlLocation>
                             </wsdlUrls> 
@@ -174,7 +174,7 @@
                             <goal>wsimport</goal>
                         </goals>
                         <configuration>
-                            <packageName>br.edu.ifpb.pos.viajei.client.transports</packageName>
+                            <packageName>br.edu.ifpb.pos.soap.viajei.client.transports</packageName>
                             <wsdlUrls>
                                 <wsdlLocation>http://localhost:8082/viajei-transport/TransportsService?wsdl</wsdlLocation>
                             </wsdlUrls> 
@@ -196,7 +196,7 @@
                             <goal>wsimport</goal>
                         </goals>
                         <configuration>
-                            <packageName>br.edu.ifpb.pos.viajei.client.transports.routes</packageName>
+                            <packageName>br.edu.ifpb.pos.soap.viajei.client.transports.routes</packageName>
                             <wsdlUrls>
                                 <wsdlLocation>http://localhost:8082/viajei-transport/RoutesService?wsdl</wsdlLocation>
                             </wsdlUrls> 
@@ -218,7 +218,7 @@
                             <goal>wsimport</goal>
                         </goals>
                         <configuration>
-                            <packageName>br.edu.ifpb.pos.viajei.client.ticket.tickets</packageName>
+                            <packageName>br.edu.ifpb.pos.soap.viajei.client.ticket.tickets</packageName>
                             <wsdlUrls>
                                 <wsdlLocation>http://localhost:8083/viajei-ticket/TicketsService?wsdl</wsdlLocation>
                             </wsdlUrls> 

@@ -5,8 +5,6 @@
  */
 package br.edu.ifpb.pos.soap.viajei.agency.domain;
 
-import br.edu.ifpb.pos.viajei.client.hotel.hotel.Hotel;
-import br.edu.ifpb.pos.viajei.client.transports.Transport;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import javax.persistence.Column;

@@ -6,7 +6,7 @@
 package br.edu.ifpb.pos.soap.viajei.agency.validator;
 
 import br.edu.ifpb.pos.soap.viajei.agency.domain.HotelBooking;
-import br.edu.ifpb.pos.viajei.client.hotel.bookings.Bookings;
+import br.edu.ifpb.pos.soap.viajei.client.hotel.bookings.Bookings;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 

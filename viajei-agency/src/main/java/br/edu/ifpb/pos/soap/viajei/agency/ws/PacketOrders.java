@@ -13,13 +13,13 @@ import br.edu.ifpb.pos.soap.viajei.agency.domain.PacketOrder;
 import br.edu.ifpb.pos.soap.viajei.agency.domain.TransportTicket;
 import br.edu.ifpb.pos.soap.viajei.agency.infra.PacketOrderRepository;
 import br.edu.ifpb.pos.soap.viajei.agency.infra.PacketRepository;
-import br.edu.ifpb.pos.viajei.client.hotel.bookings.Bookings;
-import br.edu.ifpb.pos.viajei.client.hotel.room.Rooms;
-import br.edu.ifpb.pos.viajei.client.ticket.tickets.Ticket;
-import br.edu.ifpb.pos.viajei.client.ticket.tickets.Tickets;
-import br.edu.ifpb.pos.viajei.client.ticket.tickets.Transport;
-import br.edu.ifpb.pos.viajei.client.transports.routes.Route;
-import br.edu.ifpb.pos.viajei.client.transports.routes.Routes;
+import br.edu.ifpb.pos.soap.viajei.client.hotel.bookings.Bookings;
+import br.edu.ifpb.pos.soap.viajei.client.hotel.room.Rooms;
+import br.edu.ifpb.pos.soap.viajei.client.ticket.tickets.Ticket;
+import br.edu.ifpb.pos.soap.viajei.client.ticket.tickets.Tickets;
+import br.edu.ifpb.pos.soap.viajei.client.ticket.tickets.Transport;
+import br.edu.ifpb.pos.soap.viajei.client.transports.routes.Route;
+import br.edu.ifpb.pos.soap.viajei.client.transports.routes.Routes;
 import javax.ejb.EJB;
 import javax.inject.Inject;
 import javax.jws.WebParam;
@@ -77,15 +77,15 @@ public class PacketOrders {
         ticket.setSeatNumber(packetOrderReq.getSeatNumber());
         
         //ticket client obj
-        br.edu.ifpb.pos.viajei.client.ticket.tickets.Client ticketClient = 
-                new br.edu.ifpb.pos.viajei.client.ticket.tickets.Client();
+        br.edu.ifpb.pos.soap.viajei.client.ticket.tickets.Client ticketClient = 
+                new br.edu.ifpb.pos.soap.viajei.client.ticket.tickets.Client();
         ticketClient.setCpf(packetOrderReq.getClientCpf());
         
         ticket.setClient(ticketClient);
         
         //booking client obj
-        br.edu.ifpb.pos.viajei.client.hotel.bookings.Client bookingClient =
-                new br.edu.ifpb.pos.viajei.client.hotel.bookings.Client();
+        br.edu.ifpb.pos.soap.viajei.client.hotel.bookings.Client bookingClient =
+                new br.edu.ifpb.pos.soap.viajei.client.hotel.bookings.Client();
         
         bookingClient.setCpf(packetOrderReq.getClientCpf());
         
