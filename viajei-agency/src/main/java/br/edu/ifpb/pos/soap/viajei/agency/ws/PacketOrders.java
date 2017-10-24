@@ -20,6 +20,7 @@ import br.edu.ifpb.pos.soap.viajei.client.ticket.tickets.Tickets;
 import br.edu.ifpb.pos.soap.viajei.client.ticket.tickets.Transport;
 import br.edu.ifpb.pos.soap.viajei.client.transports.routes.Route;
 import br.edu.ifpb.pos.soap.viajei.client.transports.routes.Routes;
+import java.math.BigDecimal;
 import javax.ejb.EJB;
 import javax.inject.Inject;
 import javax.jws.WebParam;
@@ -76,6 +77,8 @@ public class PacketOrders {
         ticket.setRoute(routeConverter.convert(route));
         
         ticket.setSeatNumber(packetOrderReq.getSeatNumber());
+        
+        ticket.setPrice(BigDecimal.valueOf(route.getDistance() * 0.2));
         
         //ticket client obj
         br.edu.ifpb.pos.soap.viajei.client.ticket.tickets.Client ticketClient = 
